@@ -1,0 +1,18 @@
+plugin:
+  name: fylr-plugin-display-field-values
+  version: "1.0"
+  url: https://github.com/programmfabrik/fylr-plugin-display-field-values
+  displayname:
+    en-US: "Display Field Values Plugin"
+    de-DE: "Feldwerte anzeigen"
+  info:
+    de-DE: |
+      Ein benutzerdefinierter Masken-Splitter, der die Werte der Felder eines Objekts innerhalb der Maske ausgibt. Damit lassen sich ausgewählte Feldwerte direkt in der Detailansicht einblenden.
+    en-US: |
+      A custom mask splitter that outputs the values of an object's fields within the mask layout. Use it to surface selected field values inline in the detail view.
+  l10n: l10n/fylr-plugin-display-field-values.csv
+  webfrontend:
+    url: fylr-plugin-display-field-values.js
+    css: fylr-plugin-display-field-values.css
+
+base_url_prefix: "webfrontend"

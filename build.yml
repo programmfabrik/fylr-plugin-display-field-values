@@ -1,0 +1,23 @@
+# Build configuration for fylr-build-plugin — the explicit build description.
+# Delivered files are listed here; "check" (runs with every build) warns when
+# a manifest reference is missing from the build folder.
+# All features: https://github.com/programmfabrik/fylr-build-plugin
+
+server:
+  install:
+    - l10n
+
+webfrontend:
+  # CoffeeScript 1.x, compiled + concatenated in this order into
+  # plugin.webfrontend.url (webfrontend/fylr-plugin-display-field-values.js)
+  coffee1:
+    - webfrontend/MarkdownEscape.coffee
+    - webfrontend/DisplayFieldValuesMaskSplitter.coffee
+    - webfrontend/DisplayFieldValuesPDFNode.coffee
+  install:
+    - webfrontend/fylr-plugin-display-field-values.css
+
+loca:
+  - csv: l10n/fylr-plugin-display-field-values.csv
+    sheet: 1nb2UWkzJX83bOm9b26EClS3uu9qHMtvNeVnKHwwK4jw
+    gid: 0
