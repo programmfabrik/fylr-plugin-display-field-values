@@ -8,12 +8,14 @@ server:
     - l10n
 
 webfrontend:
-  # CoffeeScript 1.x, compiled + concatenated in this order into
-  # plugin.webfrontend.url (webfrontend/fylr-plugin-display-field-values.js)
-  coffee1:
-    - webfrontend/MarkdownEscape.coffee
-    - webfrontend/DisplayFieldValuesMaskSplitter.coffee
-    - webfrontend/DisplayFieldValuesPDFNode.coffee
+  # assembled into plugin.webfrontend.url, in this order:
+  # .coffee is compiled (CoffeeScript 1.x), .scss compiled,
+  # anything else taken verbatim
+  bundles:
+    - sources:
+        - webfrontend/MarkdownEscape.coffee
+        - webfrontend/DisplayFieldValuesMaskSplitter.coffee
+        - webfrontend/DisplayFieldValuesPDFNode.coffee
   install:
     - webfrontend/fylr-plugin-display-field-values.css
 
