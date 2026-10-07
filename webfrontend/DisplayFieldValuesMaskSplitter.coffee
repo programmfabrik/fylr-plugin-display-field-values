@@ -277,7 +277,7 @@ class ez5.DisplayFieldValuesMaskSplitter extends CustomMaskSplitter
 			if CUI.util.isEmpty(value)
 				value = ""
 			else if poolAttr == "contact"
-				value = value.user?._generated_displayname or value.group?._generated_displayname ""
+				value = value.user?._generated_displayname or value.group?._generated_displayname or ""
 			else
 				value = ez5.loca.getBestFrontendValue(value)
 
